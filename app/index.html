@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>あの人と、本と。 - ワイヤーフレーム</title>
+    <meta name="description" content="大切な人を、みんなの選書と言葉で編む共同編集ギフトのワイヤーフレーム" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand-wrap" href="#top" aria-label="あの人と、本と。トップへ">
+        <img class="brand-logo" src="sample-brand-logo.png" alt="あの人と、本と。" />
+        <span class="brand-caption">共同編集ギフト</span>
+      </a>
+      <nav class="top-actions" aria-label="主要メニュー">
+        <button class="icon-button" id="font-size-toggle" aria-pressed="false" title="文字を大きく表示">文字 A+</button>
+        <button class="secondary small" id="plain-language-toggle" aria-pressed="false">やさしい文言</button>
+        <a class="primary small button-link" href="#screens">画面を見る</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="sample-hero-kv.png" alt="本を抱く女性と、選書について語り合う仲間たち" />
+        <div class="hero-shade"></div>
+        <div class="hero-copy">
+          <span class="hero-kicker">BOOKS BECOME PORTRAITS.</span>
+          <h1 id="hero-title">大切な人を、<br />本で編む。</h1>
+          <p class="hero-description" data-standard="みんなの選書と言葉から、その人らしさを一冊の贈りものに。" data-plain="みんなで本と言葉を選び、ひとつの贈りものを作ります。">
+            みんなの選書と言葉から、その人らしさを一冊の贈りものに。
+          </p>
+          <div class="cta-row">
+            <a class="primary button-link" href="#project-create">企画を作る</a>
+            <a class="glass-button button-link" href="#contribution">招待された方はこちら</a>
+          </div>
+        </div>
+        <div class="hero-index" aria-hidden="true">
+          <span>01</span>
+          <span class="hero-index-line"></span>
+          <span>14</span>
+        </div>
+      </section>
+
+      <section class="concept-band" aria-label="サービスの流れ">
+        <p>ひとりを想う。みんなで選ぶ。ことばに編む。本人へ贈る。</p>
+      </section>
+
+      <section class="page-shell" id="screens">
+        <div class="wireframe-note">
+          <span>WIREFRAME / v3</span>
+          <p>設計内容と導線を確認するための叩き台です。最終デザインではありません。</p>
+        </div>
+        <div class="screen-tabs" role="tablist" aria-label="画面グループ">
+          <button class="screen-tab active" role="tab" aria-selected="true" data-filter="all">すべて</button>
+          <button class="screen-tab" role="tab" aria-selected="false" data-filter="organizer">企画する</button>
+          <button class="screen-tab" role="tab" aria-selected="false" data-filter="contributor">参加する</button>
+          <button class="screen-tab" role="tab" aria-selected="false" data-filter="recipient">受け取る</button>
+        </div>
+
+        <section class="screen-grid" aria-label="画面ワイヤーフレーム一覧">
+        <article class="panel screen-card" id="project-create" data-group="organizer">
+          <div class="screen-header">
+            <span class="screen-tag">SC-02</span>
+            <h2>企画作成</h2>
+          </div>
+          <div class="field">
+            <label>贈る相手</label>
+            <div class="input">山田さん</div>
+          </div>
+          <div class="field">
+            <label>関係性</label>
+            <div class="input">同僚 / 10年の付き合い</div>
+          </div>
+          <div class="field">
+            <label>節目</label>
+            <div class="tag-row">
+              <span class="tag active">退職</span>
+              <span class="tag">結婚</span>
+              <span class="tag">還暦</span>
+            </div>
+          </div>
+          <div class="field">
+            <label>エピソード</label>
+            <div class="textarea">会社を一緒に支えてくれた、いつも丁寧で頼りになる人。</div>
+          </div>
+          <button class="primary wide">招待リンクを作成</button>
+        </article>
+
+        <article class="panel screen-card" data-group="organizer">
+          <div class="screen-header">
+            <span class="screen-tag">SC-03</span>
+            <h2>招待共有</h2>
+          </div>
+          <div class="share-box">
+            <div class="small-label">招待リンク</div>
+            <div class="link-box">https://.../gift/abcd1234</div>
+          </div>
+          <div class="participant-list">
+            <div class="person-row">
+              <span class="avatar">A</span>
+              <span>あおい</span>
+              <span class="status invited">招待済み</span>
+            </div>
+            <div class="person-row">
+              <span class="avatar">B</span>
+              <span>けんた</span>
+              <span class="status joined">参加中</span>
+            </div>
+            <div class="person-row">
+              <span class="avatar">C</span>
+              <span>さくら</span>
+              <span class="status idle">未参加</span>
+            </div>
+          </div>
+          <div class="cta-row compact">
+            <button class="secondary">コピー</button>
+            <button class="secondary">LINEで送る</button>
+          </div>
+        </article>
+
+        <article class="panel screen-card" id="contribution" data-group="contributor">
+          <div class="screen-header">
+            <span class="screen-tag">SC-05</span>
+            <h2>選書・コメント入力</h2>
+          </div>
+          <div class="field">
+            <label>本を選ぶ</label>
+            <div class="book-options" role="radiogroup" aria-label="参考書籍">
+              <button class="book-option selected" aria-pressed="true">
+                <img src="sample-book-self-building.png" alt="SELF BUILDING 自分づくりと人育ての法則" />
+                <span>自分らしさ</span>
+              </button>
+              <button class="book-option" aria-pressed="false">
+                <img src="sample-book-communication.png" alt="ほんとうの自分で人といられるレッスン" />
+                <span>対話</span>
+              </button>
+              <button class="book-option" aria-pressed="false">
+                <img src="sample-book-ai-automation.png" alt="最強のAI自動化術" />
+                <span>挑戦</span>
+              </button>
+              <button class="book-option" aria-pressed="false">
+                <img src="sample-book-github-copilot.png" alt="はじめてのGitHub Copilot入門" />
+                <span>好奇心</span>
+              </button>
+            </div>
+          </div>
+          <div class="field">
+            <label>あなたの一言</label>
+            <div class="textarea short">あなたのまっすぐさと、周りを安心させる力が本当にすごいと思います。</div>
+          </div>
+          <div class="helper-row">
+            <button class="secondary small">AIで下書き</button>
+            <button class="secondary small">音声入力</button>
+            <span class="counter">96 / 100</span>
+          </div>
+          <button class="primary wide">投稿する</button>
+        </article>
+
+        <article class="panel screen-card" data-group="organizer">
+          <div class="screen-header">
+            <span class="screen-tag">SC-07</span>
+            <h2>進捗ダッシュボード</h2>
+          </div>
+          <div class="stats-row">
+            <div class="stat-box">
+              <div class="stat-value">6</div>
+              <div class="stat-label">参加者</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">4</div>
+              <div class="stat-label">投稿済み</div>
+            </div>
+            <div class="stat-box">
+              <div class="stat-value">2</div>
+              <div class="stat-label">未投稿</div>
+            </div>
+          </div>
+          <div class="progress-block">
+            <div class="progress-top">
+              <span>参加率</span>
+              <strong>67%</strong>
+            </div>
+            <div class="progress-bar"><span style="width:67%"></span></div>
+          </div>
+          <div class="reminder-box">
+            <div class="small-label">リマインド</div>
+            <p>残り 2 人に未投稿のご連絡を送る</p>
+          </div>
+        </article>
+
+        <article class="panel screen-card wide-card" data-group="organizer">
+          <div class="screen-header">
+            <span class="screen-tag">SC-08</span>
+            <h2>AIレビュー画面</h2>
+          </div>
+          <div class="review-grid">
+            <div class="review-box">
+              <div class="small-label">他己紹介文</div>
+              <p>
+                山田さんは、静かに周囲を支え、誰かが困っているとすぐに手を差し伸べる人です。
+              </p>
+              <div class="source-tag">根拠: 3件のコメント</div>
+            </div>
+            <div class="review-box">
+              <div class="small-label">人物像の言語化</div>
+              <p>
+                一見落ち着いているが、実は思いやりが強く、信頼される存在です。
+              </p>
+              <div class="source-tag">根拠: 5件のコメント</div>
+            </div>
+            <div class="review-box full">
+              <div class="small-label">おすすめ本棚</div>
+              <div class="book-grid">
+                <figure><img src="sample-book-self-building.png" alt="SELF BUILDING" /><figcaption>芯の強さ</figcaption></figure>
+                <figure><img src="sample-book-communication.png" alt="ほんとうの自分で人といられるレッスン" /><figcaption>対話する力</figcaption></figure>
+                <figure><img src="sample-book-ai-automation.png" alt="最強のAI自動化術" /><figcaption>新しい挑戦</figcaption></figure>
+                <figure><img src="sample-book-github-copilot.png" alt="はじめてのGitHub Copilot入門" /><figcaption>学び続ける姿</figcaption></figure>
+              </div>
+            </div>
+          </div>
+          <div class="cta-row compact">
+            <button class="secondary">修正</button>
+            <button class="secondary">再生成</button>
+            <button class="primary">確定する</button>
+          </div>
+        </article>
+
+        <article class="panel screen-card" data-group="organizer">
+          <div class="screen-header">
+            <span class="screen-tag">SC-09</span>
+            <h2>自分新聞プレビュー</h2>
+          </div>
+          <div class="newspaper">
+            <div class="news-head">自分新聞</div>
+            <div class="news-section">
+              <h3>他己紹介</h3>
+              <p>チームの中で、安心感を生む人。</p>
+            </div>
+            <div class="news-section">
+              <h3>おすすめ本棚</h3>
+              <ul>
+                <li>人を動かす</li>
+                <li>信頼の作り方</li>
+                <li>自分を持つ</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel screen-card" data-group="recipient">
+          <div class="screen-header">
+            <span class="screen-tag">SC-13</span>
+            <h2>共有カード</h2>
+          </div>
+          <div class="share-card-preview">
+            <div class="card-top">
+              <span>限定公開</span>
+              <span class="private-pill">非公開</span>
+            </div>
+            <div class="card-title">山田さんの自分新聞</div>
+            <div class="card-body">
+              <div class="mini-stat">3,200 views</div>
+              <div class="mini-stat">30 comments</div>
+            </div>
+          </div>
+          <div class="cta-row compact">
+            <button class="secondary">画像を保存</button>
+            <button class="primary">共有する</button>
+          </div>
+        </article>
+
+        <article class="panel screen-card" data-group="organizer">
+          <div class="screen-header">
+            <span class="screen-tag">SC-10</span>
+            <h2>受け渡し設定</h2>
+          </div>
+          <div class="option-list">
+            <div class="option selected">
+              <div class="option-main">デジタルで受け取る</div>
+              <div class="option-note">LINE で直接届く</div>
+            </div>
+            <div class="option">
+              <div class="option-main">印刷物で受け取る</div>
+              <div class="option-note">配送予定</div>
+            </div>
+            <div class="option">
+              <div class="option-main">店頭受取</div>
+              <div class="option-note">準備中</div>
+            </div>
+          </div>
+          <button class="primary wide">送る</button>
+        </article>
+
+        <article class="panel screen-card welcome-card" data-group="contributor">
+          <div class="screen-header"><span class="screen-tag">SC-04</span><h2>参加ウェルカム</h2></div>
+          <div class="welcome-mark">招</div>
+          <h3>山田さんへ、本と言葉を贈りませんか。</h3>
+          <p class="muted-copy">所要時間は約3分。本が思いつかなくても、コメントだけで参加できます。</p>
+          <div class="accessibility-choice"><span>表示サイズ</span><button class="secondary small">標準</button><button class="secondary small">大きめ</button></div>
+          <button class="primary wide">参加する</button>
+        </article>
+
+        <article class="panel screen-card completion-card" data-group="contributor">
+          <div class="screen-header"><span class="screen-tag">SC-06</span><h2>投稿完了</h2></div>
+          <div class="completion-check">✓</div>
+          <h3>あなたの言葉を預かりました。</h3>
+          <p class="muted-copy">共有カードへの掲載は、本人が許可した内容だけに限定されます。</p>
+          <label class="consent-row"><input type="checkbox" /> 匿名・加工済みの形で共有を許可する</label>
+        </article>
+
+        <article class="panel screen-card recipient-card wide-card" data-group="recipient">
+          <div class="screen-header"><span class="screen-tag">SC-11</span><h2>受け手ビュー</h2></div>
+          <div class="recipient-view">
+            <div class="recipient-image">
+              <img src="sample-recipient-emotion.png" alt="仲間から届いた自分新聞と本を開き、思わず笑顔になる受け手" />
+              <div class="recipient-image-caption">
+                <span>6人から届いた、あなたの知らないあなた。</span>
+                <small>DELIVERED WITH 4 BOOKS &amp; 6 STORIES</small>
+              </div>
+            </div>
+            <div class="recipient-copy">
+              <span class="small-label">FOR YAMADA</span>
+              <h3>「自分では気づかなかった私」に、出会う。</h3>
+              <blockquote>静かな情熱と、誰かの挑戦をそっと支える強さ。私たちは、そんなあなたに何度も助けられました。</blockquote>
+              <p>6人の仲間が選んだ4冊と、あなたへ贈る言葉を一つの新聞にまとめました。</p>
+              <div class="cta-row"><button class="primary">自分新聞を読む</button><button class="secondary">保存する</button></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="panel screen-card" data-group="recipient">
+          <div class="screen-header"><span class="screen-tag">SC-12</span><h2>反応入力</h2></div>
+          <p class="question-copy">この贈りものを、大切な人にすすめたいですか？</p>
+          <div class="nps-scale" aria-label="0から10の評価"><button>0</button><button>2</button><button>4</button><button>6</button><button class="selected">8</button><button>10</button></div>
+          <div class="textarea short">自分では気づかなかった一面を知れて、うれしかったです。</div>
+          <button class="primary wide">感想を送る</button>
+        </article>
+
+        <article class="panel screen-card" data-group="contributor">
+          <div class="screen-header"><span class="screen-tag">SC-14</span><h2>代理入力</h2></div>
+          <div class="proxy-banner">支援者として入力中</div>
+          <div class="field"><label>どなたの言葉を入力しますか</label><div class="input">佐藤 はなさん</div></div>
+          <div class="field"><label>本人から預かった言葉</label><div class="textarea">昔から、新しいことを楽しむ姿が印象に残っています。</div></div>
+          <p class="privacy-note">言葉の持ち主と、入力を支援した人を分けて記録します。</p>
+          <button class="primary wide">本人の言葉として確認する</button>
+        </article>
+      </section>
+      </section>
+    </main>
+    <script>
+      const body = document.body;
+      const fontToggle = document.querySelector('#font-size-toggle');
+      const languageToggle = document.querySelector('#plain-language-toggle');
+
+      fontToggle.addEventListener('click', () => {
+        const active = body.classList.toggle('large-text');
+        fontToggle.setAttribute('aria-pressed', String(active));
+      });
+
+      languageToggle.addEventListener('click', () => {
+        const active = body.classList.toggle('plain-language');
+        languageToggle.setAttribute('aria-pressed', String(active));
+        document.querySelectorAll('[data-standard]').forEach((element) => {
+          element.textContent = active ? element.dataset.plain : element.dataset.standard;
+        });
+      });
+
+      document.querySelectorAll('.screen-tab').forEach((tab) => {
+        tab.addEventListener('click', () => {
+          document.querySelectorAll('.screen-tab').forEach((item) => {
+            item.classList.remove('active');
+            item.setAttribute('aria-selected', 'false');
+          });
+          tab.classList.add('active');
+          tab.setAttribute('aria-selected', 'true');
+          const filter = tab.dataset.filter;
+          document.querySelectorAll('.screen-card').forEach((card) => {
+            card.hidden = filter !== 'all' && card.dataset.group !== filter;
+          });
+        });
+      });
+
+      document.querySelectorAll('.book-option').forEach((option) => {
+        option.addEventListener('click', () => {
+          document.querySelectorAll('.book-option').forEach((item) => {
+            item.classList.remove('selected');
+            item.setAttribute('aria-pressed', 'false');
+          });
+          option.classList.add('selected');
+          option.setAttribute('aria-pressed', 'true');
+        });
+      });
+    </script>
+  </body>
+</html>
